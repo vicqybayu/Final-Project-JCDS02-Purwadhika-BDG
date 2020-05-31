@@ -15,4 +15,42 @@ I added a few columns that i thought can offer more insight for the data analysi
 
 I started this step by comparing the baseline model for three algorithm which are **logistic regression, random forest classification, and extreme gradient boosting classification**. The baseline model then evaluated using **recall** and **roc_auc** metrics for 5 fold **cross validation**.
 
-The purpose of this step is to maximizing the recall rate of the class 1 target (default), the model then will be used to predict the outcome for all dataset, then the amount of money saved from the 
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Model%20Performance.PNG?raw=true)
+
+XGBoost gave us the best performance for both ROC AUC and Recall metrics, thus this model will be the one used for the dataset.
+
+The purpose of this step is to maximizing the recall rate of the class 1 target (default). The model then will be used to predict the outcome for all dataset, then the amount of money saved will be calculated for each optimization.
+
+The final model that is chosen is the model trained without a few features such as
+- ApprovalDate
+- CreateJob
+- RetainedJob
+- DisbursementDate
+- GrAppv
+- DaysToDisbursement
+
+and also by looking at the ROC AUC curve, the model performed better when the probability threshold are decsreased. Thus the final model is using 0,37 as the probability threshold for the prediction. Above 0,37 will be considered default, and below will be considered paid in full. Below is the classification report.
+
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Classification%20Report.PNG?raw=true)
+
+This model can detect 90 percent of defaulted loan and resulting in more than **7 billion dollar** saved from the previous loan data in the dataset. I personally believe this model is can help loan officer to better analyze an incoming loan application.
+
+## Dashboard
+
+### Prediction Home
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Screenshot%20(49).png?raw=true)
+
+### Prediction Result
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Screenshot%20(52).png?raw=true)
+
+### Dataset
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Screenshot%20(50).png?raw=true)
+
+### Data Visualization
+![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Screenshot%20(51).png?raw=true)
+
+## Conclusions
+- XGB Classifier with baseline parameter and 0.37 threshold gives 0.90 recall performance on the model, meaning 90% default loan is succesfully predicted by the model.
+- The final model gives 0.97 roc auc score, this means the model have a great performance in predicting wether a loan will be paid in full or ended up defaulted.
+- Around 7 billion dollar of past loan can be saved using this model.
+- There's no interest rate for each loan application, thus we can't calculate the profit from the each loan. This made us unable to consider how much profit we can get thus only loss prevention considered to be the most important aspect of model selection. 
