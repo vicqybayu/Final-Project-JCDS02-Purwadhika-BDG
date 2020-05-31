@@ -1,7 +1,7 @@
 # Final-Project-JCDS02-Purwadhika-BDG
 ## Small Business Administration (SBA) Loan Default Prediction
 
-Small business can help decrease unemployment rate in a country. Therefore, helping them to expand their business through loan is something that USA Small Business Administration (SBA) do. SBA helping small business by backing up a certain amount of loan that the business applied to bank. This means that the bank didn't have to take full loss if the business failed to pay the loan in full (default) which means minimizing risk the bank need to take.
+Small business can help decrease unemployment rate in a country. Therefore, helping them to expand their business through loan is something that USA Small Business Administration (SBA) do. SBA helping small business by backing up a certain amount of loan that the business applied to a bank. This means that the bank didn't have to take full loss if the business failed to pay the loan in full (default) which means minimizing risk the bank need to take.
 
 In this project, i positioned myself as a loan approval officer to try to predict wether a loan will end up succesfully paid in full or defaulted. The project consisted of several steps including data preprocessing and exploratory data analysis, data visualization, and modelling.
 
