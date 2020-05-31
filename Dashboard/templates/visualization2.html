@@ -1,0 +1,15 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="chart mt-0" id="default_per_ind">
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        var default_per_ind= {{data | safe}}
+        Plotly.plot('default_per_ind', default_per_ind,{})   
+    </script>
+{% endblock body %}

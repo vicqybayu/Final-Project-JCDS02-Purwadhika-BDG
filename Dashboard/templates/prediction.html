@@ -1,0 +1,80 @@
+{%extends 'layout.html'%}
+
+<html>
+    <head>
+
+    </head>
+    <body>
+    {% block body %}
+    <div class="container-fluid pt 5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 mt-3">
+                <h3>Input Loan Applicant Information Here!</h3>
+                <form action="/" method="POST">
+                    <!--State-->
+                    <select class="form-control form-control-sm mt-3" name="State" id="">
+                        <option value="">Select State </option>
+                        {% for item in data_states %}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!--NAICS-->
+                    <select class="form-control form-control-sm mt-2" name="NAICS" id="">
+                        <option value="">Select NAICS </option>
+                        {% for item in data_naics %}
+                            <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
+                    <!--Term-->
+                    <input type="number" name="Term" max="600" min="0" placeholder="Loan Month Terms" class="form-control form-control-sm mt-2">
+                    <!--NoEmp-->
+                    <input type="number" name="NoEmp" max="10000" min="0" placeholder="Number of Employee" class="form-control form-control-sm mt-2">
+                    <!--NewExist-->
+                    <select class="form-control form-control-sm mt-2" name="NewExist" id="">
+                        <option value="">New or Established Businesses </option>
+                        <option value="Yes"> New </option>
+                        <option value="No"> Established</option>
+                    </select>
+                    <!--FranchiseCode-->
+                    <select class="form-control form-control-sm mt-2" name="FranchiseCode" id="">
+                        <option value="">Franchise or Non-Franchise Business </option>
+                        <option value="Yes"> Franchise </option>
+                        <option value="No"> Non-Franchise </option>
+                    </select>
+                    <!--UrbanRural-->
+                    <select class="form-control form-control-sm mt-2" name="UrbanRural" id="">
+                        <option value="">In an Urban, Rural, or Undefined </option>
+                        <option value="Urban"> Urban </option>
+                        <option value="Rural"> Rural </option>
+                        <option value="Undefined"> Undefined </option>
+                    </select>
+                    <!--LowDoc-->
+                    <select class="form-control form-control-sm mt-2" name="LowDoc" id="">
+                        <option value="">LowDoc Loans or Not </option>
+                        <option value="Y"> LowDoc </option>
+                        <option value="N"> Not LowDoc </option>
+                    </select>
+                    <!--DisbursementGross-->
+                    <input type="number" name="DisbursementGross" min="0" placeholder="Loan Amount" class="form-control form-control-sm mt-2">
+                    <!--SBA_Appv-->
+                    <input type="number" name="SBA_Appv" min="0" placeholder="Loan Amount Backed by SBA" class="form-control form-control-sm mt-2">
+                    <!--Recession-->
+                    <select class="form-control form-control-sm mt-2" name="Recession" id="">
+                        <option value="">Loan Active During Recession Period or Not </option>
+                        <option value="Yes"> Yes </option>
+                        <option value="No"> No </option>
+                    </select>
+                    <!--RealEstate-->
+                    <select class="form-control form-control-sm mt-2" name="RealEstate" id="">
+                        <option value="">Loan Backed by Real Estate or Not</option>
+                        <option value="Yes"> Yes </option>
+                        <option value="No"> No </option>
+                    </select>
+                    <button type="submit" class="btn btn-dark mt-3 mb-3"> Predict </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock body %}
+    </body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="chart mt-0" id="defaul_case_per_year">
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        var defaul_case_per_year= {{data | safe}}
+        Plotly.plot('defaul_case_per_year', defaul_case_per_year,{})   
+    </script>
+{% endblock body %}

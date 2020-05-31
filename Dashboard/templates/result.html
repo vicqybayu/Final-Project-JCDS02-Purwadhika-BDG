@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+<html>
+    <head>
+
+    </head>
+    <body>
+    {% block body %}
+    <div class="card" style="top: 50% !important; left: 50% !important; position: absolute !important; margin: 0 !important; transform: translate(-50%, -50%) !important;">
+        <div class="card-body"> 
+            <h4> Prediction Result : {{hasil_prediction[0]}} <br><br> Loan Default Probability : {{hasil_prediction[1]}}</h4>
+        </div>
+
+    {% endblock body %}
+    </body>
+</html>
