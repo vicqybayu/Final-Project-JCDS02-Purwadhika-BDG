@@ -33,7 +33,7 @@ and also by looking at the ROC AUC curve, the model performed better when the pr
 
 ![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Classification%20Report.PNG?raw=true)
 
-This model can detect 90 percent of defaulted loan and resulting in more than **7 billion dollar** saved from the previous loan data in the dataset. I personally believe this model is can help loan officer to better analyze an incoming loan application.
+This model can detect 90 percent of defaulted loan and resulting in more than **7 billion dollar** saved from the previous loan data in the dataset. There's no interest rate for each loan application, thus we can't calculate the profit from the each loan. This made us unable to consider how much profit we can get thus only loss prevention considered to be the most important aspect of model selection.
 
 ## Dashboard
 
@@ -53,4 +53,3 @@ This model can detect 90 percent of defaulted loan and resulting in more than **
 - XGB Classifier with baseline parameter and 0.37 threshold gives 0.90 recall performance on the model, meaning 90% default loan is succesfully predicted by the model.
 - The final model gives 0.97 roc auc score, this means the model have a great performance in predicting wether a loan will be paid in full or ended up defaulted.
 - Around 7 billion dollar of past loan can be saved using this model.
-- There's no interest rate for each loan application, thus we can't calculate the profit from the each loan. This made us unable to consider how much profit we can get thus only loss prevention considered to be the most important aspect of model selection. 
