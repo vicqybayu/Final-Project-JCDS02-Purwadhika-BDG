@@ -50,6 +50,6 @@ This model can detect 90 percent of defaulted loan and resulting in more than **
 ![alt tag](https://github.com/vicqybayu/Final-Project-JCDS02-Purwadhika-BDG/blob/master/Github%20Markdown%20Image/Screenshot%20(51).png?raw=true)
 
 ## Conclusions
-- XGB Classifier with baseline parameter and 0.37 threshold gives 0.90 recall performance on the model, meaning 90% default loan is succesfully predicted by the model.
+- XGB Classifier with baseline parameter and 0.37 threshold gives 0.90 recall performance on the model, meaning 90% defaulted loan are succesfully predicted by the model.
 - The final model gives 0.97 roc auc score, this means the model have a great performance in predicting wether a loan will be paid in full or ended up defaulted.
-- Around 7 billion dollar of past loan can be saved using this model.
+- Around 7 billion dollar of charged amount of money from the past loan can be saved using this model.
